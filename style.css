@@ -1,0 +1,49 @@
+.main {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    border: 2px solid grey;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 750px;
+}
+
+.user_info {
+    display: flex;
+    min-height: 250px;
+    position: relative;
+    top: 10px;
+}
+
+.user_repo.description {
+    font-size: 20px;
+}
+
+#user_repo {
+    min-height: 80px;
+    justify-content: space-evenly;
+}
+
+.repo {
+    background-color: white;
+}
+
+#user_pagination,
+#user_pagination ul {
+    margin-bottom: 15px;
+    justify-content: center;
+}
+
+.user_pic #image {
+    width: 60%;
+    border-radius: 50%;
+
+    @media (max-width: 576px) {
+        width: 30%;
+    }
+}
+
+#github_url {
+    font-size: small;
+}
