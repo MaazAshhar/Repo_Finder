@@ -25,7 +25,7 @@ function handleRepoInfo(res) {
 }
 function handleUserInfo(res) {
     if (res.message && res.message == "Not Found") {
-        window.location.href = cur_url.origin+cur_url.pathname;
+        window.location.href = String(cur_url.origin)+String(cur_url.pathname);
         alert("Please provide a valid username. I'm redirecting to the default username");
     }
     const name = document.getElementById("name");
