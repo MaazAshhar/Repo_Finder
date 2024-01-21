@@ -25,7 +25,7 @@ function handleRepoInfo(res) {
 }
 function handleUserInfo(res) {
     if (res.message && res.message == "Not Found") {
-        window.location.href = cur_url.origin;
+        window.location.href = cur_url.origin+cur_url.pathname;
         alert("Please provide a valid username. I'm redirecting to the default username");
     }
     const name = document.getElementById("name");
@@ -89,7 +89,6 @@ function addTopic(topics) {
     return topicString;
 }
 function handlePagination() {
-    console.log(pagination_data);
     if (!pagination_data) {
         return;
     }
@@ -101,7 +100,6 @@ function handlePagination() {
         const url = new URL(dataArray[0].replace("<", "").replace(">", ""));
         map.set(dataArray[1], url.searchParams.get("page"));
     });
-    console.log(map);
     addPagination(map);
 }
 function addPagination(map) {
