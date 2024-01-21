@@ -75,7 +75,7 @@ function getUserInfo(username = DEFAULT_USERNAME) {
 }
 function addRepo(repo, repoString) {
     repoString += `<div class="repo col-sm-5 my-3 col-10 rounded">
-                                <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer"><h3 class="title" style="font-size:20px;">${repo.name}</h3></a>` +
+                                <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer"><h3 class="title" style="font-size:20px; word-wrap: break-word;">${repo.name}</h3></a>` +
         (repo.description != null ? `<h5 class="description" style="font-size:12px;">${repo.description}</h5>` : ``)
         + `<div class="topic d-flex flex-wrap mb-2">${addTopic(repo.topics)}</div>
                             </div>`;
